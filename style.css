@@ -1,0 +1,20 @@
+body {
+  background-color: #EFB7B0;
+}
+
+h1 {
+  color: #913A43;
+  font-family: "Bangers";
+}
+
+h2 {
+  color: #57643C;
+  font-family: "Bangers";
+}
+
+ul {
+	color: #262732;
+	font-family: "Arial";
+}
+
+.table {color: #E0C778;}
