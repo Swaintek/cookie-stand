@@ -11,21 +11,22 @@ var CookieStand = function (place, minCustHour, maxCustHour, avgCookiesCust) {
 	this.totalCookieHour = [];
 	this.cookieSum = 0;
 	this.makeTable = function () {
-		var tablestore = document.getElementById(place);
-		var itemstore = document.createElement('th');
-		tablestore.appendChild(document.createTextNode(place));
+		var tableStore = document.getElementById(place);
+		var itemStore = document.createElement('th');
+		itemStore.appendChild(document.createTextNode(place));
+		tableStore.appendChild(itemStore);
 		for (var i = 0; i < times.length; i++) {
 			this.totalCookieHour.push(Math.floor(this.randCustHour() * this.avgCookiesCust));
-			var list = document.getElementById(place);
+			var table = document.getElementById(place);
 			var item = document.createElement('td');
 			item.appendChild(document.createTextNode(this.totalCookieHour[i]));
-			list.appendChild(item);
+			table.appendChild(item);
 			this.cookieSum += this.totalCookieHour[i];
 		};
-		var list = document.getElementById(place);
-		var item = document.createElement('td');
-		item.appendChild(document.createTextNode(this.cookieSum));
-		list.appendChild(item);
+		var tableSum = document.getElementById(place);
+		var itemSum = document.createElement('td');
+		itemSum.appendChild(document.createTextNode(this.cookieSum));
+		tableSum.appendChild(itemSum);
 	};
 	
 	};
