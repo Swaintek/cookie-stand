@@ -11,37 +11,46 @@ var CookieStand = function (place, minCustHour, maxCustHour, avgCookiesCust) {
 	this.totalCookieHour = [];
 	this.cookieSum = 0;
 	this.makeTable = function () {
-		var tableStore = document.getElementById(place);
-		var itemStore = document.createElement('th');
-		itemStore.appendChild(document.createTextNode(place));
-		tableStore.appendChild(itemStore);
+		var tableRow = document.getElementById('salesTable');
+		var newRow = document.createElement('tr');
+		var rowHead = document.createElement('th');
+		var storeName = document.createTextNode(place);
+		rowHead.appendChild(storeName);
+		newRow.appendChild(rowHead);
+		tableRow.appendChild(newRow);
 		for (var i = 0; i < times.length; i++) {
 			this.totalCookieHour.push(Math.floor(this.randCustHour() * this.avgCookiesCust));
-			var table = document.getElementById(place);
 			var item = document.createElement('td');
 			item.appendChild(document.createTextNode(this.totalCookieHour[i]));
-			table.appendChild(item);
+			newRow.appendChild(item);
 			this.cookieSum += this.totalCookieHour[i];
 		};
-		var tableSum = document.getElementById(place);
 		var itemSum = document.createElement('td');
 		itemSum.appendChild(document.createTextNode(this.cookieSum));
-		tableSum.appendChild(itemSum);
+		newRow.appendChild(itemSum);
 	};
 	
 	};
 
-var pikePlace = new CookieStand('Pike Place Market', 17, 88, 5.2);
-var seaTac = new CookieStand('SeaTac Airport', 6, 44, 1.2);
-var southCenter = new CookieStand('Southcenter Mall', 11, 38, 1.9);
-var bellevueSquare = new CookieStand('Bellevue Square', 20, 48, 3.3);
-var alki = new CookieStand('Alki Beach', 3, 24, 2.6)
+var storeForm = document.getElementById('storeForm');
+var storeButton = document.getElementById('storeButton');
+var storeLoc = document.getElementById('storeLoc');
+var minCust = document.getElementById('minCust');
+var maxCust = document.getElementById('maxCust');
+var avgCust = document.getElementById('avgCust');
 
-var placeNames = [pikePlace, seaTac, southCenter, bellevueSquare, alki]
+storeButton.addEventListener('click', function() {
+	event.preventDefault();
+	// console.log(storeLoc.value);
+	var newStore = new CookieStand(storeLoc.value, minCust.value, maxCust.value, avgCust.value);
+	// console.log(newStore);
+	newStore.makeTable();
+	});
 
-for (var i = 0; i < placeNames.length; i++) {
-	placeNames[i].makeTable();
-};
+
+
+
+
 
 
 

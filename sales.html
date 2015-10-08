@@ -25,56 +25,25 @@
 		</tr>
 	</thead>
 
-	<tbody>
-		<tr id="Pike Place Market"></tr>
-		<tr id="SeaTac Airport"></tr>
-		<tr id="Southcenter Mall"></tr>
-		<tr id="Bellevue Square"></tr>
-		<tr id="Alki Beach"></tr>
+	<tbody id="salesTable">
 	</tbody>
+
 </table>
 
-<form>
-	<p> Location:
-		<input type="text" name="Location" size="15" />
-	</p>
+<form id="storeForm">
+    <label for="storeLoc">Store Location: </label>
+    <input id="storeLoc" type="text">
+    <label for="minCust">MinCust </label>
+    <input id="minCust" type="text">
+    <label for="maxCust">MaxCust </label>
+    <input id="maxCust" type="text">
+    <label for="avgCust">Avg Cust </label>
+    <input id="avgCust" type="text">
 
-	<p> Minimum Customers Per Hour:
-		<input type="text" name="minCust" size="15" />
-	</p>
-
-	<p> Maximum Customers Per Hour:
-		<input type="text" name="maxCust" size="15" />
-	</p>
-
-	<p> Average Cookies Per Customer:
-		<input type="text" name="avgCookies" size="15" />
-	</p>
-
-</form>
+    <button id="storeButton" type="click">Submit data!</button>
+ </form>
 
 
-
-
-
-
-
-
-
-
-
-
-<!-- <h1>Cookie Stand</h1>
-	<h2>Pike Place Market</h2>
-	<ul id="Pike Place Market"></ul>
-	<h2>SEATAC Airport</h2>
-	<ul id="SeaTac Airport"></ul>
-	<h2>Southcenter Mall</h2>
-	<ul id="Southcenter Mall"></ul>
-	<h2>Bellevue Square</h2>
-	<ul id="Bellevue Square"></ul>
-	<h2>Alki Beach</h2>
-	<ul id="Alki Beach"></ul> -->
 
 	<script src="app.js"></script>
 
