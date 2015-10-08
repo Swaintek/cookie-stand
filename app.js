@@ -10,18 +10,21 @@ var CookieStand = function (place, minCustHour, maxCustHour, avgCookiesCust) {
 	};
 	this.totalCookieHour = [];
 	this.cookieSum = 0;
-	this.makeUL = function () {
+	this.makeTable = function () {
+		var tablestore = document.getElementById(place);
+		var itemstore = document.createElement('th');
+		tablestore.appendChild(document.createTextNode(place));
 		for (var i = 0; i < times.length; i++) {
 			this.totalCookieHour.push(Math.floor(this.randCustHour() * this.avgCookiesCust));
 			var list = document.getElementById(place);
-			var item = document.createElement('li');
-			item.appendChild(document.createTextNode(times[i] + this.totalCookieHour[i]));
+			var item = document.createElement('td');
+			item.appendChild(document.createTextNode(this.totalCookieHour[i]));
 			list.appendChild(item);
 			this.cookieSum += this.totalCookieHour[i];
 		};
 		var list = document.getElementById(place);
-		var item = document.createElement('li');
-		item.appendChild(document.createTextNode('Total: ' + this.cookieSum));
+		var item = document.createElement('td');
+		item.appendChild(document.createTextNode(this.cookieSum));
 		list.appendChild(item);
 	};
 	
@@ -36,9 +39,8 @@ var alki = new CookieStand('Alki Beach', 3, 24, 2.6)
 var placeNames = [pikePlace, seaTac, southCenter, bellevueSquare, alki]
 
 for (var i = 0; i < placeNames.length; i++) {
-	placeNames[i].makeUL();
+	placeNames[i].makeTable();
 };
-
 
 
 
