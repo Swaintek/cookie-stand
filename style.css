@@ -1,26 +1,83 @@
+@font-face {
+	font-family: 'Dam';
+	src: url('fonts/burnstown_dam.otf');
+}
+
+header {
+	height: 200;
+	padding-top: 200px;
+	background-color: #AF5E64;
+	background-image: url("img/salmon.png");
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+th, td {
+	border: 1px solid #000;
+}
+
+.logo {
+	font-family: 'Righteous';	
+	text-align: center;
+	text-shadow: 5px 1px 5px #16181C;
+	color: #E0C778;
+	font-size: 400%;
+}
+
+.slogan {
+	font-family: 'Righteous';	
+	text-align: center;
+	text-shadow: 5px 1px 5px #16181C;
+	color: #E0C778;
+	font-size: 100%;
+}
+
+.locations {
+	font-family: 'Righteous';
+	list-style-type: none;	
+	text-align: center;
+	text-shadow: 5px 1px 5px #E0C778;
+	color: #000000;
+	font-size: 100%;
+}
+
+img.align-center {
+	display: block;
+	margin: 0px auto;}
+
 body {
-  background-color: #EFB7B0;
+  background-color: #E2BEC6;
 }
 
-h1 {
-  color: #913A43;
-  font-family: "Bangers";
+.history {
+	background-color: #E0C778;
+	margin: 10px auto 10px auto;
+	border-style: solid;
+	border-width: 20px;
+	padding: 10px;
+	border-color: #8D3722 #AD5845 #B96955 #C97954;
+	font-family: 'Righteous';
+	text-align: center;
+	color: #000000;
+	font-size: 100%;
 }
 
-h2 {
-  color: #57643C;
-  font-family: "Bangers";
+.historyp {
+	text-align: justify;
 }
 
-ul {
-	color: #262732;
-	font-family: "Arial";
+.tshirt {
+	background-color: #E0C778;
+	margin: 10px auto 10px auto;
+	border-style: solid;
+	border-width: 20px;
+	padding: 10px;
+	border-color: #8D3722 #AD5845 #B96955 #C97954;
+	font-family: 'Righteous';
+	text-align: center;
+	color: #000000;
+	font-size: 100%;
 }
 
-p {
-	color: #415325;
-	background-color: #F9D6E2;
-	font-family: "Arial";
 }
 
-.table {color: #E0C778;}
