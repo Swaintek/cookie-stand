@@ -1,26 +1,49 @@
-@font-face {
-	font-family: 'Dam';
-	src: url('fonts/burnstown_dam.otf');
+* {
+	font-family: "Righteous";
 }
 
 header {
 	height: 200;
 	padding-top: 200px;
-	background-color: #AF5E64;
+	background-color: #774753;
 	background-image: url("img/salmon.png");
 	background-repeat: no-repeat;
 	background-position: center top;
+}
+
+h1 {
+	text-align: center;
+	color: #EA9E98;
+	text-shadow: 5px 1px 5px #16181C;
+	float: top;
+}
+
+.history {
+	background-color: #D5D3CD;
 }
 
 th, td {
 	border: 1px solid #000;
 }
 
+thead th {
+	background-color: dimgrey;
+	color: #D5D3CD;
+}
+
+tr:nth-child(even) {
+	background-color: lightgrey;
+}
+
+tr:nth-child(odd) {
+	background-color: white;
+}
+
 .logo {
 	font-family: 'Righteous';	
 	text-align: center;
 	text-shadow: 5px 1px 5px #16181C;
-	color: #E0C778;
+	color: #EA9E98;
 	font-size: 400%;
 }
 
@@ -28,56 +51,50 @@ th, td {
 	font-family: 'Righteous';	
 	text-align: center;
 	text-shadow: 5px 1px 5px #16181C;
-	color: #E0C778;
+	color: #EA9E98;
 	font-size: 100%;
 }
 
-.locations {
-	font-family: 'Righteous';
-	list-style-type: none;	
+#tshirt {
+	float: bottom;
+}
+
+#sales {
+	background-color: white;
+}
+
+body {
+	background-color: #D5D3CD;
+}
+
+aside {
+	font-family: 'Righteous';	
 	text-align: center;
-	text-shadow: 5px 1px 5px #E0C778;
+	background-color: #EA9E98;
+	border: 3px solid #D5D3CD;
 	color: #000000;
 	font-size: 100%;
+	float: left;
+	padding-bottom: 200px;
+}
+
+li {
+	list-style-type: none;
+	text-align: left;
 }
 
 img.align-center {
 	display: block;
-	margin: 0px auto;}
+	margin: 5px auto;}
 
-body {
-  background-color: #E2BEC6;
+.content {
+	background-color: #8F5A61;
+	float: top;
 }
 
-.history {
-	background-color: #E0C778;
-	margin: 10px auto 10px auto;
-	border-style: solid;
-	border-width: 20px;
-	padding: 10px;
-	border-color: #8D3722 #AD5845 #B96955 #C97954;
-	font-family: 'Righteous';
+footer {
 	text-align: center;
-	color: #000000;
-	font-size: 100%;
-}
-
-.historyp {
-	text-align: justify;
-}
-
-.tshirt {
-	background-color: #E0C778;
-	margin: 10px auto 10px auto;
-	border-style: solid;
-	border-width: 20px;
-	padding: 10px;
-	border-color: #8D3722 #AD5845 #B96955 #C97954;
-	font-family: 'Righteous';
-	text-align: center;
-	color: #000000;
-	font-size: 100%;
-}
-
+	float: bottom;
+	background-color: #EFB7B0;
 }
 
